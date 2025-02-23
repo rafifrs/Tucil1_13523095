@@ -9,7 +9,7 @@ class Reader {
             // Baca dimensi dan tipe case
             String[] dimensions = reader.readLine().trim().split("\\s+");
             if (dimensions.length != 3) {
-                throw new IOException("Format dimensi tidak valid. Dibutuhkan: width height blockCount");
+                throw new IOException("Invalid dimension format. Required format: width height blockCount");
             }
     
             int height = Integer.parseInt(dimensions[0]);
@@ -21,7 +21,7 @@ class Reader {
             try {
                 puzzleCase = CaseType.valueOf(caseType);
             } catch (IllegalArgumentException e) {
-                throw new IOException("Tipe case tidak valid. Pilihan: DEFAULT, PYRAMID, CUSTOM");
+                throw new IOException("Invalid case type. Options: DEFAULT, PYRAMID, CUSTOM");
             }
 
             List<Block> blocks;
@@ -33,6 +33,20 @@ class Reader {
                     reader.readLine();
                 }
                 blocks = readBlocks(reader, blockCount);
+            }
+            
+            if (blocks.size() != blockCount) {
+                throw new IOException("The number of blocks does not match the blockCount");
+            }
+            
+
+            int totalCoordinates = 0;
+            for (Block block : blocks) {
+                totalCoordinates += block.coordinates.size();
+            }
+
+            if (totalCoordinates != width * height) {
+                throw new IOException("No solution because the number of block coordinates does not match width * height");
             }
     
             return new Data(width, height, blockCount, puzzleCase, blocks);

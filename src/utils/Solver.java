@@ -14,13 +14,16 @@ public class Solver {
     
     public boolean solve() {
         boolean foundSolution = solveRecursive(0, board);
-        System.out.println("\nTotal cases checked: " + casesChecked);
+        System.out.println();
+        System.out.println("\033[32mTotal cases checked: " + casesChecked + "\033[0m");
         return foundSolution;
     }
     
     private boolean solveRecursive(int blockIndex, Board board) {
         if (blockIndex >= blocks.size()) {
-            System.out.println("\nSolution found:");
+            System.out.println();
+            System.out.println("\033[32mSolution found:  \033[0m");
+            System.out.println();
             System.out.println(board.toColoredString());
             return true;
         }
@@ -31,7 +34,7 @@ public class Solver {
 
         for (Block orientation : orientations) {
             for (int x = board.width - 1; x >= 0; x--) {
-                for (int y = 0; y < board.height; y++)  {
+                for (int y = 0; y < board.height; y++) {
                     if (board.canPlace(orientation, x, y)) {
                         board.placeBlock(orientation, x, y);
                         if (solveRecursive(blockIndex + 1, board)) {

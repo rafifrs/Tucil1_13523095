@@ -8,7 +8,7 @@ public class Main {
         Data puzzleData;
         try{
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Enter the file name: ");
+            System.out.print("\033[33mEnter the file name: \033[0m");
             String fileName = scanner.nextLine();
             puzzleData = Reader.readFromFile("test/input/" + fileName);
 
@@ -16,7 +16,6 @@ public class Main {
             
             if (puzzleData.caseType == CaseType.DEFAULT) {
                 board = new Board(puzzleData.width, puzzleData.height);
-                System.out.println(board);
             } else {
                 try (BufferedReader reader = new BufferedReader(new FileReader("test/input/" + fileName))) {
                 reader.readLine();
@@ -31,17 +30,17 @@ public class Main {
             long startTime = System.currentTimeMillis();
             boolean hasSolution = solver.solve();
             long endTime = System.currentTimeMillis();
-            System.out.println("Time taken: " + (endTime - startTime) + " ms");
+            System.out.println("\033[32mTime taken: " + (endTime - startTime) + " ms\033[0m");
             
             if (!hasSolution) {
-                System.out.println("No solution found!");
+                System.err.println("\033[31mNo solution found!\033[0m");
             }
-
-            System.out.println("What format do you want to save the solution? ");
+            System.out.println();
+            System.out.println("\033[34mWhat format do you want to save the solution?\033[0m");
             System.out.println("1. txt format");
             System.out.println("2. jpg format");
             System.out.println("3. Dont save the solution");
-            System.out.print("Choose the format: ");
+            System.out.print("\033[33mChoose the format: \033[0m");
 
             String answer = scanner.nextLine();
             
@@ -49,15 +48,17 @@ public class Main {
             if (answer.equalsIgnoreCase("1")) {
 
                 Save.saveToFile(fileName, hasSolution, solver.board, solver.casesChecked, (endTime - startTime));
+                System.out.println("\033[32mSolution saved as text file.\033[0m"); 
             }
             else if (answer.equalsIgnoreCase("2")) {
                 Save.saveToImg(fileName, solver.board);
+                System.out.println("\033[32mSolution saved as image.\033[0m");
             }
             else {
-                System.out.println("Solution not saved.");
+                System.out.println("\033[31mSolution not saved.\033[0m");
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("\033[31m" + e.getMessage() + "\033[0m"); 
         }
 
     }

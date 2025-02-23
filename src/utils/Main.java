@@ -21,7 +21,6 @@ public class Main {
                 reader.readLine();
                 reader.readLine();
                 board = Reader.readCustomBoard(reader, puzzleData.width, puzzleData.height);
-                System.out.println(board);
                 }
             }
             

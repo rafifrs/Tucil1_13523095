@@ -1,10 +1,15 @@
-3 4 4
+4 5 4
 DEFAULT
-A
-AA
-B
-BB
-C
-CC
-D
-DD
+ZZ
+EE
+E
+E
+ QQQ
+ Q
+QQ
+Q
+ OO
+ OO
+OOO
+
+

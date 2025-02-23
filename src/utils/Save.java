@@ -7,8 +7,8 @@ import java.awt.image.BufferedImage;
 
 public class Save {
     private static final String OUTPUT_DIR = "test/output/";
-    private static final int CELL_SIZE = 100;
-    private static final int PADDING = 15;
+    private static final int CELL_SIZE = 50;
+    private static final int PADDING = 10;
 
     public static void saveToFile(String inputFileName, boolean hasSolution, Board solution, long totalCases, long timeTaken) {
         try {

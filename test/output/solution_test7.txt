@@ -1,7 +1,11 @@
 Solution found:
-AAAA
-ABCA
-ABBA
-AAAA
-Total cases checked: 0
-Time taken: 6 milliseconds
+CADBA
+CADBA
+EADDA
+EAAAA
+EEFFG
+FFFGG
+Total cases checked: 28447
+Time taken: 166 milliseconds
+
+

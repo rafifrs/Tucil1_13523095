@@ -1,0 +1,12 @@
+Solution found:
+DDDE..
+DCDEE.
+CCCCEE
+.BBAAA
+..BBBB
+Total cases checked: 170
+Time taken: 17 milliseconds
+
+
+
+

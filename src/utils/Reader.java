@@ -45,7 +45,7 @@ class Reader {
                 totalCoordinates += block.coordinates.size();
             }
 
-            if (totalCoordinates != width * height) {
+            if (puzzleCase == CaseType.DEFAULT && totalCoordinates != width * height) {
                 throw new IOException("No solution because the number of block coordinates does not match width * height");
             }
     

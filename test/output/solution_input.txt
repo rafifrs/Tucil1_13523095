@@ -1,8 +1,0 @@
-Solution found:
-EEEAA
-DEEAG
-DDBBG
-FFBCG
-FFFCC
-Total cases checked: 27016
-Time taken: 145 milliseconds

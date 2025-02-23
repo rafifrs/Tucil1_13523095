@@ -1,8 +1,10 @@
 Solution found:
-CCC
-CCC
-AAC
-ABB
-ABB
-Total cases checked: 86
-Time taken: 11 milliseconds
+...E...
+.EEECD.
+BBBCCCC
+.BBAAA.
+...A...
+Total cases checked: 2268
+Time taken: 25 milliseconds
+
+

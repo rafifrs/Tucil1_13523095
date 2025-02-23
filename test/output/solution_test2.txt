@@ -1,0 +1,8 @@
+Solution found:
+QQQZZ
+OOQEE
+OOQQE
+OOOQE
+Total cases checked: 29
+Time taken: 12 milliseconds
+

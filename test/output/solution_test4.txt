@@ -1,0 +1,12 @@
+Solution found:
+EFFAAAA
+EEFABBA
+GGFABBA
+GHFAAAA
+GHFCCCD
+GHHCDDD
+GGHCDDD
+Total cases checked: 217535
+Time taken: 734 milliseconds
+
+

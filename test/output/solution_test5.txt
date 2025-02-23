@@ -1,0 +1,10 @@
+Solution found:
+R....
+RR...
+QRS..
+QQQS.
+PPPPS
+Total cases checked: 36
+Time taken: 6 milliseconds
+
+

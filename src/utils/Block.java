@@ -1,5 +1,4 @@
 package utils;
-import java.io.*;
 import java.util.*;
 
 public class Block {
@@ -15,7 +14,6 @@ public class Block {
         this.rotation = 0;
     }
     
-    // Deep copy 
     public Block(Block other) {
         this.type = other.type;
         this.coordinates = new ArrayList<>();
@@ -51,13 +49,11 @@ public class Block {
         int minX = Integer.MAX_VALUE;
         int minY = Integer.MAX_VALUE;
         
-        // Cari koordinat minimum
         for (Point p : coordinates) {
             minX = Math.min(minX, p.x);
             minY = Math.min(minY, p.y);
         }
         
-        // Geser semua koordinat
         for (Point p : coordinates) {
             p.x -= minX;
             p.y -= minY;

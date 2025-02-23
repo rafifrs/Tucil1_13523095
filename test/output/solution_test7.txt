@@ -1,0 +1,7 @@
+Solution found:
+AAAA
+ABCA
+ABBA
+AAAA
+Total cases checked: 0
+Time taken: 6 milliseconds

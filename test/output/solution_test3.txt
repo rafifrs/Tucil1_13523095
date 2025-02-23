@@ -1,0 +1,8 @@
+Solution found:
+CCC
+CCC
+AAC
+ABB
+ABB
+Total cases checked: 86
+Time taken: 11 milliseconds
